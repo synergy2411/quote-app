@@ -19,7 +19,6 @@ export class LibraryPage implements OnInit {
 
   onSelectCategory(quoteGroups: Category) {
     this.navCtrl.push(QuotesPage, {category : quoteGroups});
-    
   }
 
 }
