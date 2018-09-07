@@ -1,3 +1,5 @@
+import { SignupPage } from './../pages/signup/signup';
+import { LoginPage } from './../pages/login/login';
 
 import { TabsPage } from './../pages/tabs/tabs.page';
 import { QuotePage } from './../pages/quote/quote';
@@ -22,7 +24,9 @@ import { QuoteService } from './../services/quote.service';
     LibraryPage,
     QuotesPage,
     QuotePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    SignupPage
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { QuoteService } from './../services/quote.service';
     LibraryPage,
     QuotesPage,
     QuotePage,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    SignupPage
   ],
   providers: [
     QuoteService,

@@ -21,9 +21,19 @@
             ion-button
             item-small 
             text-right 
-            (click)="onFavorite(quote)">
+            (click)="onFavorite(quote)"
+            *ngIf="!isFavorite(quote)">
             <!-- <ion-icon name="star"></ion-icon> -->
             Favorite</button>
+            <button clear 
+              ion-button
+              item-small 
+              text-right 
+              color="danger"
+              (click)="onUnfavorite(quote)"
+              *ngIf="isFavorite(quote)">
+              <!-- <ion-icon name="star"></ion-icon> -->
+              Unfavorite</button>
         </ion-col>
       </ion-row>
     </ion-card-content>

@@ -1,15 +1,20 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons end>
+      <button ion-item menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
     <ion-title>My Favorites</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list >
-    <ion-item 
-      *ngFor="let quote of favoriteQuotes" 
-      (click)="onSelect(quote)">
+  <ion-list>
+    <ion-item *ngFor="let quote of favoriteQuotes" (click)="onSelect(quote)">
       <h2> {{ quote.person }}</h2>
       <p> {{ quote.text }}</p>
     </ion-item>

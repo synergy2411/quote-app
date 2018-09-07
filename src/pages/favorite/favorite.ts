@@ -23,5 +23,10 @@ export class FavoritePage implements OnInit{
   onSelect(quote : Quote){
     const modal = this.modalCtrl.create(QuotePage, { quote : quote});
     modal.present();
+    modal.onDidDismiss((flag : boolean)=>{
+      if(flag){
+        this.quoteService.removeQuoteFromFavorite(quote);
+      }
+    })
   }
 }

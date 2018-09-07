@@ -17,7 +17,7 @@ export class QuotePage implements OnInit{
    console.log(this.quote);
   }
 
-  onClose(){
-    this.viewCtrl.dismiss();
+  onClose(remove : boolean = false){
+    this.viewCtrl.dismiss(remove);
   }
 }

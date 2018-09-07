@@ -20,6 +20,12 @@ export class QuotesPage implements OnInit{
     console.log(this.quoteGroup);
   }
 
+  onUnfavorite(quote: Quote ){
+    this.quoteService.removeQuoteFromFavorite(quote);
+  }
+  isFavorite(quote : Quote){
+    return this.quoteService.isQuoteFavorite(quote);
+  }
   onFavorite(quote : Quote){
     const alert = this.alertCtrl.create({
       title : 'Favorite Quote Selected',
