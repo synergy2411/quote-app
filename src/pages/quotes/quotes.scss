@@ -1,3 +1,10 @@
 page-quotes {
-
+    $myVar : 'MyValue';
+    .author{
+        color : #ccc;
+        float: right;
+        &:before{
+        content : ' - ';
+        }
+    }
 }

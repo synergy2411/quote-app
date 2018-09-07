@@ -1,3 +1,5 @@
+import { QuotesPage } from './../quotes/quotes';
+import { NavController } from 'ionic-angular';
 import { Category } from './../../data/category.interface';
 import { Component, OnInit } from '@angular/core';
 import quotes from '../../data/quotes';
@@ -8,10 +10,16 @@ import quotes from '../../data/quotes';
 })
 export class LibraryPage implements OnInit {
 
-  quotesCollection : Category[];
+  quotesCollection: Category[];
 
-      ngOnInit(){
-        this.quotesCollection = quotes;
-      }
+  constructor(private navCtrl : NavController){}
+  ngOnInit() {
+    this.quotesCollection = quotes;
+  }
+
+  onSelectCategory(quoteGroups: Category) {
+    this.navCtrl.push(QuotesPage, {category : quoteGroups});
+    
+  }
 
 }

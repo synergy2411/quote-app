@@ -10,7 +10,9 @@
 <ion-content padding>
   <h3>Select Your Quote</h3>
   <ion-list>
-    <button ion-item *ngFor="let quoteGroups of quotesCollection">
+    <button ion-item 
+      *ngFor="let quoteGroups of quotesCollection"
+      (click)="onSelectCategory(quoteGroups)">
       <ion-icon [name]="quoteGroups.icon" item-left></ion-icon>
       <h2>{{ quoteGroups.category | uppercase}}</h2>
       <p> {{ quoteGroups.quotes.length }} Quotes </p>
